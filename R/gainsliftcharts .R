@@ -48,7 +48,7 @@ gainschart <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
               )
   class(obj) <- "gainschart"
 
-  return(obj)
+  return(invisible(obj))
 }
 
 #' gainslift gainschart_diffsize Function
@@ -94,7 +94,7 @@ gainschart_diffsize <- function(gainsdata_diffsize, title = NULL, xlabel = NULL,
   )
   class(obj) <- "gainschart_diffsize"
 
-  return(obj)
+  return(invisible(obj))
 }
 
 #' gainslift liftchart Function
@@ -146,7 +146,7 @@ liftchart <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
   )
   class(obj) <- "liftchart"
 
-  return(obj)
+  return(invisible(obj))
 }
 
 #' gainslift liftchart_diffsize Function
@@ -192,5 +192,5 @@ liftchart_diffsize <- function(liftdata_diffsize, title = NULL, xlabel = NULL, y
   )
   class(obj) <- "liftchart_diffsize"
 
-  return(obj)
+  return(invisible(obj))
 }

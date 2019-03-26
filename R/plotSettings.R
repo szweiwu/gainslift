@@ -31,7 +31,7 @@ gains_chart <- function(data, title, xlabel, ylabel){
   colnames(plot_table) <- names(data)
   plot_table$Cum.Records.Pct <- data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
        geom_line(aes(y = value, colour = variable),
@@ -42,7 +42,7 @@ gains_chart <- function(data, title, xlabel, ylabel){
                  size = 0.6) +
        scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100)) +
        scale_y_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Cumulative Gains Chart")
@@ -50,7 +50,7 @@ gains_chart <- function(data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -58,7 +58,7 @@ gains_chart <- function(data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("% Cumulative Response")
@@ -67,7 +67,6 @@ gains_chart <- function(data, title, xlabel, ylabel){
     ylabel <- ylab(ylabel)
   }
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -98,9 +97,9 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table[-1,], id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
@@ -110,7 +109,7 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
               size = 0.6) +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100)) +
     scale_y_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Cumulative Decile Gains Chart")
@@ -118,7 +117,7 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -126,7 +125,7 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("% Cumulative Response")
@@ -134,9 +133,8 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -167,7 +165,7 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   colnames(plot_table) <- names(data)
   plot_table$Cum.Records.Pct <- data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_hline(yintercept = 0, colour = "grey", linetype = "dashed") +
@@ -186,7 +184,7 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -194,7 +192,7 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Cumulative Profits")
@@ -202,9 +200,8 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -235,9 +232,9 @@ decile_profit_gains_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
@@ -250,7 +247,7 @@ decile_profit_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -258,7 +255,7 @@ decile_profit_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Cumulative Profits")
@@ -266,9 +263,8 @@ decile_profit_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -298,9 +294,9 @@ noncum_decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table[-1,], id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
@@ -315,7 +311,7 @@ noncum_decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -323,7 +319,7 @@ noncum_decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("% Response")
@@ -331,9 +327,8 @@ noncum_decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -363,14 +358,14 @@ noncum_decile.profit_gains_chart <- function(decile_data, title, xlabel, ylabel)
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Non-Cumulative Decile Profit Gains Chart")
@@ -378,7 +373,7 @@ noncum_decile.profit_gains_chart <- function(decile_data, title, xlabel, ylabel)
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -386,7 +381,7 @@ noncum_decile.profit_gains_chart <- function(decile_data, title, xlabel, ylabel)
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Profits")
@@ -394,9 +389,8 @@ noncum_decile.profit_gains_chart <- function(decile_data, title, xlabel, ylabel)
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -428,15 +422,15 @@ lift_chart <- function(data, title, xlabel, ylabel){
   colnames(plot_table) <- names(data)
   plot_table$Cum.Records.Pct <- data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table[-1,], id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(line chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     geom_hline(aes(yintercept = 1, lty = "Random"),
                colour = "black") +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Lift Chart")
@@ -444,7 +438,7 @@ lift_chart <- function(data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -452,7 +446,7 @@ lift_chart <- function(data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Lift")
@@ -460,9 +454,8 @@ lift_chart <- function(data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -492,16 +485,16 @@ decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table[-1,], id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
     geom_hline(aes(yintercept = 1, lty = "Random"),
                colour = "black") +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Decile Lift Chart")
@@ -509,7 +502,7 @@ decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -517,7 +510,7 @@ decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Lift")
@@ -525,9 +518,8 @@ decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -557,7 +549,7 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
   colnames(plot_table) <- names(data)
   plot_table$Cum.Records.Pct <- data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_hline(aes(yintercept = 0, lty = "Random"),
@@ -565,7 +557,7 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Profit Lift Chart (Additive)")
@@ -573,7 +565,7 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -581,7 +573,7 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Incremental Profits")
@@ -589,9 +581,8 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -621,14 +612,14 @@ decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Decile Profit Lift Chart (Additive)")
@@ -636,7 +627,7 @@ decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -644,7 +635,7 @@ decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Incremental Profits")
@@ -652,9 +643,8 @@ decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -684,15 +674,15 @@ noncum_decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table[-1,], id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
     geom_hline(aes(yintercept = 10, colour = "black", lty = "Random"), colour = "black") +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100)) +
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Non-Cumulative Decile Lift Chart")
@@ -700,7 +690,7 @@ noncum_decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -708,7 +698,7 @@ noncum_decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Lift")
@@ -716,9 +706,8 @@ noncum_decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
 
@@ -748,14 +737,14 @@ noncum_decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   colnames(plot_table) <- names(decile_data)
   plot_table$Cum.Records.Pct <- decile_data[[1]]$Cum.Records.Pct
   plot_table <- melt(plot_table, id.vars='Cum.Records.Pct')
-  
+
   # Create ggplot object(bar chart)
-  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) + 
+  p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
-  
+
   # Create title
   if(is.null(title) == T){
     title <- ggtitle("Non-Cumulative Decile Profit Lift Chart (Additive)")
@@ -763,7 +752,7 @@ noncum_decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     title <- ggtitle(title)
   }
-  
+
   # Create xlab
   if(is.null(xlabel) == T){
     xlabel <- xlab("% Records")
@@ -771,7 +760,7 @@ noncum_decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     xlabel <- xlab(xlabel)
   }
-  
+
   # Create ylab
   if(is.null(ylabel) == T){
     ylabel <- ylab("Profits")
@@ -779,8 +768,7 @@ noncum_decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   else{
     ylabel <- ylab(ylabel)
   }
-  
+
   plot_obj <- p + theme + title + xlabel + ylabel
-  print(plot_obj)
   return(plot_obj)
 }
