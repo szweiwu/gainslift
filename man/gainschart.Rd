@@ -7,14 +7,14 @@
 gainschart(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL)
 }
 \arguments{
-\item{gainsdata}{A gainsdata object.
-see \code{gainsdata}.}
-
 \item{title}{a text label for the main title.}
 
 \item{xlabel}{a text label for the x axis.}
 
 \item{ylabel}{a text label for the y axis.}
+
+\item{gainsdata}{A gainsdata object.
+see \code{gainsdata}.}
 }
 \description{
 gainslift gainschart Function

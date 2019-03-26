@@ -7,14 +7,14 @@
 liftchart(liftdata, title = NULL, xlabel = NULL, ylabel = NULL)
 }
 \arguments{
-\item{liftdata}{A liftdata object.
-see \code{liftdata}.}
-
 \item{title}{a text label for the main title.}
 
 \item{xlabel}{a text label for the x axis.}
 
 \item{ylabel}{a text label for the y axis.}
+
+\item{liftdata}{A liftdata object.
+see \code{liftdata}.}
 }
 \description{
 gainslift liftchart Function
