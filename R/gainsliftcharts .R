@@ -54,7 +54,7 @@ gainschart <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
 #' gainslift gainschart_diffsize Function
 #'
 #'
-#' @param gainsdata.diffsize A gainsdata.diffsize object.
+#' @param gainschart_diffsize A gainsdata.diffsize object.
 #' see \code{gainsdata.diffsize}.
 #'
 #' @param title a text label for the main title.
@@ -69,8 +69,8 @@ gainschart <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
 #'
 #' @export
 gainschart_diffsize <- function(gainsdata_diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
-  chart_type <- gainsdata.diffsize$table_type
-  data <- gainsdata.diffsize$data
+  chart_type <- gainsdata_diffsize$table_type
+  data <- gainsdata_diffsize$data
 
   # Plot charts
   switch(chart_type,
@@ -152,7 +152,7 @@ liftchart <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
 #' gainslift liftchart_diffsize Function
 #'
 #'
-#' @param liftdata.diffsize A liftdata.diffsize object.
+#' @param liftchart_diffsize A liftdata.diffsize object.
 #' see \code{liftdata.diffsize}.
 #'
 #' @param title a text label for the main title.
@@ -167,8 +167,8 @@ liftchart <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
 #'
 #' @export
 liftchart_diffsize <- function(liftdata_diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
-  chart_type <- liftdata.diffsize$table_type
-  data <- liftdata.diffsize$data
+  chart_type <- liftdata_diffsize$table_type
+  data <- liftdata_diffsize$data
 
   # Plot charts
   switch(chart_type,
@@ -188,7 +188,7 @@ liftchart_diffsize <- function(liftdata_diffsize, title = NULL, xlabel = NULL, y
   # return object
   obj <- list(data = data,
               table_type = chart_type,
-              plot_object = plot_obj
+              plot_object = plot_object
   )
   class(obj) <- "liftchart_diffsize"
 
