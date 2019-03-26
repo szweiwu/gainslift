@@ -1,5 +1,5 @@
 library(reshape2)
-#' gainslift plot.gainsdata Function
+#' gainslift gainschart Function
 #'
 #'
 #' @param gainsdata A gainsdata object.
@@ -16,7 +16,7 @@ library(reshape2)
 #' gainschart(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.gainsdata <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
+gainschart <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- gainsdata$table_type
   data <- gainsdata$data
 
@@ -51,7 +51,7 @@ plot.gainsdata <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL
   return(obj)
 }
 
-#' gainslift plot.gainsdata.diffsize Function
+#' gainslift gainschart.diffsize Function
 #'
 #'
 #' @param gainsdata.diffsize A gainsdata.diffsize object.
@@ -65,10 +65,10 @@ plot.gainsdata <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL
 #'
 #'
 #' @usage
-#' plot.gainsdata.diffsize(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
+#' gainschart.diffsize(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.gainsdata.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
+gainschart.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- gainsdata.diffsize$table_type
   data <- gainsdata.diffsize$data
 
@@ -97,7 +97,7 @@ plot.gainsdata.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = N
   return(obj)
 }
 
-#' gainslift plot.liftdata Function
+#' gainslift liftchart Function
 #'
 #'
 #' @param liftdata A liftdata object.
@@ -111,10 +111,10 @@ plot.gainsdata.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = N
 #'
 #'
 #' @usage
-#' plot.liftdata(liftdata, title = NULL, xlabel = NULL, ylabel = NULL)
+#' liftchart(liftdata, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.liftdata <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
+liftchart <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- liftdata$table_type
   data <- liftdata$data
 
@@ -149,7 +149,7 @@ plot.liftdata <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
   return(obj)
 }
 
-#' gainslift plot.liftdata.diffsize Function
+#' gainslift liftchart.diffsize Function
 #'
 #'
 #' @param liftdata.diffsize A liftdata.diffsize object.
@@ -163,10 +163,10 @@ plot.liftdata <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
 #'
 #'
 #' @usage
-#' plot.liftdata.diffsize(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
+#' liftchart.diffsize(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.liftdata.diffsize <- function(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
+liftchart.diffsize <- function(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- liftdata.diffsize$table_type
   data <- liftdata.diffsize$data
 
