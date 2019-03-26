@@ -85,20 +85,20 @@ gainsdata_diffsize <- function(list, type = 'cum'){
   # Plot charts
   switch(chart_type,
     'cum' = {
+      data <- lapply(list[[1]][[1]], decile_table, responses = list[[1]][[2]])
       for (i in 1:(length(list)-1)){
-        data <- lapply(list[[i]][[1]], decile_table, responses = list[[i]][[2]])
         data <- append(data, lapply(list[[i+1]][[1]], decile_table, responses = list[[i+1]][[2]]))
       }
     },
     'decile' = {
+      data <- lapply(list[[1]][[1]], decile_table, responses = list[[1]][[2]])
       for (i in 1:(length(list)-1)){
-        data <- lapply(list[[i]][[1]], decile_table, responses = list[[i]][[2]])
         data <- append(data, lapply(list[[i+1]][[1]], decile_table, responses = list[[i+1]][[2]]))
       }
     },
     'noncum' = {
+      data <- lapply(list[[1]][[1]], decile_table, responses = list[[1]][[2]])
       for (i in 1:(length(list)-1)){
-        data <- lapply(list[[i]][[1]], decile_table, responses = list[[i]][[2]])
         data <- append(data, lapply(list[[i+1]][[1]], decile_table, responses = list[[i+1]][[2]]))
       }
     },
