@@ -12,10 +12,10 @@
 #'
 #'
 #' @usage
-#' plot.gainsdata(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL
+#' gainschart(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.gainsdata <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
+gainschart <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- gainsdata$table_type
   data <- gainsdata$data
 
@@ -64,10 +64,10 @@ plot.gainsdata <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL
 #'
 #'
 #' @usage
-#' plot.gainsdata.diffsize(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
+#' gainschart.diffsize(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.gainsdata.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
+gainschart.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- gainsdata$table_type
   data <- gainsdata$data
 
@@ -110,10 +110,10 @@ plot.gainsdata.diffsize <- function(gainsdata.diffsize, title = NULL, xlabel = N
 #'
 #'
 #' @usage
-#' plot.liftdata(liftdata, title = NULL, xlabel = NULL, ylabel = NULL)
+#' liftchart(liftdata, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.liftdata <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
+liftchart <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- liftdata$table_type
   data <- liftdata$data
 
@@ -162,10 +162,10 @@ plot.liftdata <- function(liftdata, title = NULL, xlabel = NULL, ylabel = NULL){
 #'
 #'
 #' @usage
-#' plot.liftdata.diffsize(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
+#' liftchart.diffsize(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL)
 #'
 #' @export
-plot.liftdata.diffsize <- function(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
+liftchart.diffsize <- function(liftdata.diffsize, title = NULL, xlabel = NULL, ylabel = NULL){
   chart_type <- liftdata$table_type
   data <- liftdata$data
 

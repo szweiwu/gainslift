@@ -80,7 +80,7 @@ gainsdata.diffsize <- function(list, type = 'cum'){
     data_requirement_check(data.frame(list[[i]][[1]]), as.vector(list[[i]][[2]]), cost=0, benefit=0)
   }
   # Identify chart type
-  chart_type <- chart_type_check(type, cost=0, benefit=0)
+  chart_type <- type_check(type, cost=0, benefit=0)
 
   # Plot charts
   switch(chart_type,
@@ -143,7 +143,7 @@ liftdata <- function(predictions, responses, type = 'cum'){
   data_requirement_check(predictions, responses, cost, benefit)
 
   # Identify chart type
-  chart_type <- chart_type_check(type, cost, benefit)
+  chart_type <- type_check(type, cost, benefit)
 
   # Plot charts
   switch(chart_type,
@@ -195,7 +195,7 @@ liftdata.diffsize <- function(list, type = 'cum'){
     data_requirement_check(data.frame(list[[i]][[1]]), as.vector(list[[i]][[2]]), cost=0, benefit=0)
   }
   # Identify chart type
-  chart_type <- chart_type_check(type, cost=0, benefit=0)
+  chart_type <- type_check(type, cost=0, benefit=0)
 
   # Plot charts
   switch(chart_type,

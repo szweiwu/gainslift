@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "1266351410",
     "id" : "F9DFE398",
-    "lastKnownWriteTime" : 1553597925,
-    "last_content_update" : 1553597925369,
+    "lastKnownWriteTime" : 1553599120,
+    "last_content_update" : 1553599120819,
     "path" : "C:/Users/User/Desktop/Research/gainslift/R/plot.gainslift .R",
     "project_path" : "R/plot.gainslift .R",
     "properties" : {
-        "cursorPosition" : "164,43",
-        "scrollLine" : "159"
+        "cursorPosition" : "164,21",
+        "scrollLine" : "156"
     },
     "relative_order" : 2,
     "source_on_save" : false,
