@@ -59,7 +59,7 @@ gainsdata <- function(predictions, responses, type = 'cum', cost = 0, benefit = 
   return(obj)
 }
 
-#' gainslift gainsdata.diffsize Function
+#' gainslift gainsdata_diffsize Function
 #'
 #'
 #' @param list a list containing one or multiple lists of \code{list(predictions, reponses)}.
@@ -71,10 +71,10 @@ gainsdata <- function(predictions, responses, type = 'cum', cost = 0, benefit = 
 #' (The default is set as 'cum')
 #'
 #' @usage
-#' gainsdata.diffsize(list, type = 'cum')
+#' gainsdata_diffsize(list, type = 'cum')
 #'
 #' @export
-gainsdata.diffsize <- function(list, type = 'cum'){
+gainsdata_diffsize <- function(list, type = 'cum'){
   # Check if "predictions" and "responses" meets the data requirements
   for (i in 1:length(list)){
     data_requirement_check(data.frame(list[[i]][[1]]), as.vector(list[[i]][[2]]), cost=0, benefit=0)
@@ -174,7 +174,7 @@ liftdata <- function(predictions, responses, type = 'cum'){
   return(obj)
 }
 
-#' gainslift liftdata.diffsize Function
+#' gainslift liftdata_diffsize Function
 #'
 #'
 #' @param list a list containing one or multiple lists of \code{list(predictions, reponses)}.
@@ -186,10 +186,10 @@ liftdata <- function(predictions, responses, type = 'cum'){
 #' (The default is set as 'cum')
 #'
 #' @usage
-#' liftdata.diffsize(list, type = 'cum')
+#' liftdata_diffsize(list, type = 'cum')
 #'
 #' @export
-liftdata.diffsize <- function(list, type = 'cum'){
+liftdata_diffsize <- function(list, type = 'cum'){
   # Check if "predictions" and "responses" meets the data requirements
   for (i in 1:length(list)){
     data_requirement_check(data.frame(list[[i]][[1]]), as.vector(list[[i]][[2]]), cost=0, benefit=0)
