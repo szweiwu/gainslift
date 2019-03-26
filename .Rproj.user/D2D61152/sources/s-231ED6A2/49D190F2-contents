@@ -109,7 +109,7 @@ gainsdata_diffsize <- function(list, type = 'cum'){
   # return object
   obj <- list(data = data,
               table_type = chart_type)
-  class(obj) <- "gainsdata.diffsize"
+  class(obj) <- "gainsdata_diffsize"
 
   return(obj)
 }
@@ -224,7 +224,7 @@ liftdata_diffsize <- function(list, type = 'cum'){
   # return object
   obj <- list(data = data,
               table_type = chart_type)
-  class(obj) <- "liftdata.diffsize"
+  class(obj) <- "liftdata_diffsize"
 
   return(obj)
 }
