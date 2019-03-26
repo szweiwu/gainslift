@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1553597734285.000,
+    "created" : 1553599757308.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1266351410",
-    "id" : "F9DFE398",
-    "lastKnownWriteTime" : 1553599120,
-    "last_content_update" : 1553599120819,
+    "hash" : "1767354065",
+    "id" : "7A1E0A1E",
+    "lastKnownWriteTime" : 1553600250,
+    "last_content_update" : 1553600250562,
     "path" : "C:/Users/User/Desktop/Research/gainslift/R/plot.gainslift .R",
     "project_path" : "R/plot.gainslift .R",
     "properties" : {
-        "cursorPosition" : "164,21",
-        "scrollLine" : "156"
+        "cursorPosition" : "65,0",
+        "scrollLine" : "60"
     },
-    "relative_order" : 2,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"
