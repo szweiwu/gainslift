@@ -67,7 +67,8 @@ gains_chart <- function(data, title, xlabel, ylabel){
     ylabel <- ylab(ylabel)
   }
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 
@@ -135,7 +136,8 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 
@@ -202,7 +204,8 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 
@@ -265,7 +268,8 @@ decile_profit_gains_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Non-cumulative Decile Gains Chart #####
@@ -329,7 +333,8 @@ noncum_decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Non-cumulative Decile Profit Gains Chart #####
@@ -391,7 +396,8 @@ noncum_decile.profit_gains_chart <- function(decile_data, title, xlabel, ylabel)
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 
@@ -456,7 +462,8 @@ lift_chart <- function(data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Decile Lift Chart #####
@@ -520,7 +527,8 @@ decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Profit Lift Chart #####
@@ -583,7 +591,8 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Decile Profit Lift Chart #####
@@ -645,7 +654,8 @@ decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Non-cumulative Decile lift Chart #####
@@ -708,7 +718,8 @@ noncum_decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }
 
 ##### Non-cumulative Decile Profit Lift Chart #####
@@ -770,5 +781,6 @@ noncum_decile_profit_lift_chart <- function(decile_data, title, xlabel, ylabel){
   }
 
   plot_obj <- p + theme + title + xlabel + ylabel
-  return(plot_obj)
+  print(plot_obj)
+  return(toString(plot_obj))
 }

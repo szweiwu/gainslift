@@ -56,7 +56,7 @@ gainsdata <- function(predictions, responses, type = 'cum', cost = 0, benefit = 
               table_type = chart_type)
   class(obj) <- "gainsdata"
 
-  return(obj)
+  return(invisible(obj))
 }
 
 #' gainslift gainsdata_diffsize Function
@@ -111,7 +111,7 @@ gainsdata_diffsize <- function(list, type = 'cum'){
               table_type = chart_type)
   class(obj) <- "gainsdata_diffsize"
 
-  return(obj)
+  return(invisible(obj))
 }
 
 #' gainslift liftdata Function
@@ -171,7 +171,7 @@ liftdata <- function(predictions, responses, type = 'cum'){
               table_type = chart_type)
   class(obj) <- "liftdata"
 
-  return(obj)
+  return(invisible(obj))
 }
 
 #' gainslift liftdata_diffsize Function
@@ -226,5 +226,5 @@ liftdata_diffsize <- function(list, type = 'cum'){
               table_type = chart_type)
   class(obj) <- "liftdata_diffsize"
 
-  return(obj)
+  return(invisible(obj))
 }

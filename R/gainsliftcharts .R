@@ -47,7 +47,6 @@ gainschart <- function(gainsdata, title = NULL, xlabel = NULL, ylabel = NULL){
               plot_object = plot_obj
               )
   class(obj) <- "gainschart"
-
   return(invisible(obj))
 }
 
