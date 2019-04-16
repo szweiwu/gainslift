@@ -19,6 +19,7 @@ bank.train <- bank.df[trainrows, ]
 testrows <- sample(setdiff(rownames(bank.df), trainrows), dim(bank.df)[1]*0.3)
 bank.test <- bank.df[testrows, ]
 
+set.seed(987)
 # Run prediction models
 ## Run Classification Tree
 bank.rp <- rpart(y ~., data = bank.train)

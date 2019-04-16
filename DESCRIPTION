@@ -6,5 +6,10 @@ Author: Sz-Wei Wu
 Description: An easy and clear package to plot Gains charts and Lift charts.
 License:   
 Encoding: UTF-8
+Imports:
+    dplyr,
+    magrittr,
+    reshape2,
+    ggplot2
 LazyData: true
 RoxygenNote: 6.1.1

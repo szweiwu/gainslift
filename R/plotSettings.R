@@ -174,7 +174,7 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     geom_line(data = data[[1]],
-              aes(x = Cum.Records.Pct, y = Random.Profit, lty = "Random"),
+              aes(x = Cum.Records.Pct, y = Cum.Random.Profit, lty = "Random"),
               colour = "black",
               size = 0.6) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
@@ -560,8 +560,7 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
 
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
-    geom_hline(aes(yintercept = 0, lty = "Random"),
-               colour = "black") +
+    geom_hline(aes(yintercept = 0, lty = 'Random'), colour = "black") +
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
