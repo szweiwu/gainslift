@@ -172,7 +172,7 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
-    geom_line(data = data[[1]],
+    geom_line(data[[1]],
               aes(x = Cum.Records.Pct, y = Cum.Random.Profit, lty = "Random"),
               colour = "black",
               size = 0.6) +

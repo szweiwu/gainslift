@@ -1,5 +1,7 @@
 # Load our functions
-source('./lib/gainslift.R')
+Sys.setenv("TAR" = "internal")
+devtools::install_github('szweiwu/gainslift')
+library(gainslift)
 
 # Load modeling output
 source('./example/modeling.R')
@@ -36,7 +38,10 @@ plot.gains.diffsize(bank_vs_credit, type = 'decile')
 
 # Cumulative Profit Gains Chart
 ## 1 curve
-plot.gains(bank_1predict, bank_actual, benefit = 20, cost = 5)
+profitgainsobj <- gainsliftTable(bank_1predict, bank_actual, benefit = 10, cost = 1.5)
+profitgainschart <- gainschart(profitgainsobj)
+profitgainschart
+write.csv(profitgainschart$data$bank_rf, 'C:/Users/User/Desktop/table.csv')
 ## multiple curves
 plot.gains(bank_3predict, bank_actual, benefit = 20, cost = 5)
 
