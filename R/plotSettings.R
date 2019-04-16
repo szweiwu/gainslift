@@ -170,13 +170,13 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
 
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
-    geom_hline(yintercept = 0, colour = "grey", linetype = "dashed") +
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     geom_line(data = data[[1]],
               aes(x = Cum.Records.Pct, y = Cum.Random.Profit, lty = "Random"),
               colour = "black",
               size = 0.6) +
+    geom_hline(yintercept = 0, colour = "grey", lty = "dashed") +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
   # Create title
