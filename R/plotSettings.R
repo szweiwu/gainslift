@@ -39,6 +39,7 @@ gains_chart <- function(data, title, xlabel, ylabel){
        geom_line(data = data[[1]],
                  aes(x = Cum.Records.Pct, y = Random.Response.Pct, lty='Random'),
                  colour = "black",
+                 lty = "longdash",
                  size = 0.6) +
        scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100)) +
        scale_y_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
@@ -107,6 +108,7 @@ decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
     geom_line(data = decile_data[[1]],
               aes(x = Cum.Records.Pct, y = Random.Response.Pct, lty = "Random"),
               colour = "black",
+              lty = "longdash",
               size = 0.6) +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100)) +
     scale_y_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
@@ -176,6 +178,7 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
     geom_line(data = data[[1]],
               aes(x = Cum.Records.Pct, y = Cum.Random.Profit, lty = "Random"),
               colour = "black",
+              lty = "longdash",
               size = 0.6) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
@@ -304,7 +307,9 @@ noncum_decile_gains_chart <- function(decile_data, title, xlabel, ylabel){
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
-    geom_hline(aes(yintercept = 10, colour = "black", lty = "Random"), colour = "black") +
+    geom_hline(aes(yintercept = 10, colour = "black", lty = "Random"),
+               colour = "black",
+               lty = "longdash") +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100)) +
     scale_y_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
@@ -434,7 +439,8 @@ lift_chart <- function(data, title, xlabel, ylabel){
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     geom_hline(aes(yintercept = 1, lty = "Random"),
-               colour = "black") +
+               colour = "black",
+               lty = "longdash") +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
   # Create title
@@ -499,7 +505,8 @@ decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
              position="dodge",
              stat="identity") +
     geom_hline(aes(yintercept = 1, lty = "Random"),
-               colour = "black") +
+               colour = "black",
+               lty = "longdash",) +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100))
 
   # Create title
@@ -560,7 +567,9 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
 
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
-    geom_hline(aes(yintercept = 0, lty = 'Random'), colour = "black") +
+    geom_hline(aes(yintercept = 0, lty = 'Random'),
+               colour = "black",
+               lty = "longdash") +
     geom_line(aes(y = value, colour = variable),
               size = 0.6) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
@@ -689,7 +698,9 @@ noncum_decile_lift_chart <- function(decile_data, title, xlabel, ylabel){
     geom_bar(aes(fill = variable, y = value, x = Cum.Records.Pct),
              position="dodge",
              stat="identity") +
-    geom_hline(aes(yintercept = 10, colour = "black", lty = "Random"), colour = "black") +
+    geom_hline(aes(yintercept = 10, colour = "black", lty = "Random"),
+               colour = "black",
+               lty = "longdash") +
     scale_x_continuous(breaks=c(10,20,30,40,50,60,70,80,90,100)) +
 
   # Create title
