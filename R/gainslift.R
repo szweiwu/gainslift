@@ -1,5 +1,8 @@
 #' gainslift gainsliftTable Function
-#'
+#' @import magrittr
+#' @import dplyr
+#' @import reshape2
+#' @import ggplot2
 #'
 #' @param predictions A dataframe containing one or multiple numeric vectors of predicted response values.
 #' All of the vectors must have the same length as \code{responses}.

@@ -1,8 +1,5 @@
-# plotFunctions
-# Functions to plot identified charts
-
-library(ggplot2)
-library(reshape2)
+#' plotFunctions
+#' Functions to plot identified charts
 
 ########## Gains ##########
 ##### Cumulative Gains Chart #####
